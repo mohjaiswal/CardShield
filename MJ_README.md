@@ -7,7 +7,8 @@
 
 # <b>Data Analysis Report</b>
 
-#
+# DataBase ERD Breakdown
+![ERD](/Users/mohjaiswal/Desktop/Unit-7-Homework-Asn/images/ERD_MJ.png)
 
 # Part 1
 
@@ -26,7 +27,7 @@
 <b>Question:</b> Is there any evidence to suggest that a credit card has been hacked? Explain your rationale.
 
 <b>Answer:</b> Keeping in mind that less than 2 dollar amount transactions account for exactly 10% of the dataset. Implying that they are rear and easily miscontrued. Yes there are a lot of individuals who have more than 15 dollars worth of smaller than 2 dollar transactions. As you can see in the aformentioned view and in the diagram below,  these small transactions summed up and arranged from highest to lowest for a clear snapshot of fraud being evident. 
-![A screenshot of the result.](/Users/mohjaiswal/Desktop/Unit-7-Homework-Asn/Top10FraudVictims.jpg)
+![A screenshot of the result.](/Users/mohjaiswal/Desktop/Unit-7-Homework-Asn/images/Top10FraudVictims.jpg)
 #
 
 <b>Question:</b> What are the top 100 highest transactions made between 7:00 am and 9:00 am?
@@ -57,8 +58,41 @@
 <b>Answer:</b> Assume that merchants charging less than 2$s are the vitcims:
 Johnson-Watts (resturant), Henderson and Sons (resturant),  Hess and Finley Scott (bar), Pugh-Williams (bar), Ruiz-Anderson (pub). No particular type of merchant is more prone, but these are the ones most likely prone to fraudulent activities.
 
-![A screenshot of the result.](/Users/mohjaiswal/Desktop/Unit-7-Homework-Asn/TopMerchantVictim.jpg)
+![A screenshot of the result.](/Users/mohjaiswal/Desktop/Unit-7-Homework-Asn/images/TopMerchantVictim.jpg)
 #
 
+
+# Part 2 
+
+Line plot representing the time series of transactions over the course of the year for each cardholder 2 and 18
+
+![A screenshot of the result.](/Users/mohjaiswal/Desktop/Unit-7-Homework-Asn/images/Card_Holder_2.png)
+
+![A screenshot of the result.](/Users/mohjaiswal/Desktop/Unit-7-Homework-Asn/images/Card_Holder_18.png)
+
+Single line plot containing both card holder transaction data
+
+![A screenshot of the result.](/Users/mohjaiswal/Desktop/Unit-7-Homework-Asn/images/Grouped_By_IdCardHolder.png)
+
+#
+
+<b>Question: </b> What difference do you observe between the consumption patterns? Does the difference suggest a fraudulent transaction? Explain your rationale.
+
+<b>Answer:</b> Card Holder 18 has a higher spending limit, thereford drawing transactions above 1000$, they have a chance of being exposed to larger financial fraud due to the higher credit limit they are utilising and therefore risk giving robbers access to. Card Holder 2 is more reserved in its deployment of credit limit, always doing smaller amounts with nothing being over 20 dollars. Finding fraudulent transactions would be much harder as it is of a smaller amount and can hide behind the day to day medium sized purchases.
+
+#
+#
+Box plot, representing the expenditure data from January 2018 to June 2018 for cardholder ID 25.
+ 
+![A screenshot of the result.](/Users/mohjaiswal/Desktop/Unit-7-Homework-Asn/images/monthly_transactions.png)
+
+<b> Question: </b> Are there any outliers for cardholder ID 25? How many outliers are there per month?
+
+<b>Answer:</b> Yes there are outliers of transacations every month except in February. April and June being the hotter months where outliers are strongly present with 3 per month. The rest (January, March and May) being single outlier months.
+
+#
+<b>Question:</b> Do you notice any anomalies? Describe your observations and conclusions.
+
+<b>Answer:</b> These transactions need to be validated by the card holder and the bank, they might be fraudulent in nature as they are outside of the usual behaviour of that card holder.
 
 
