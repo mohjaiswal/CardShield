@@ -44,7 +44,7 @@ Note: Looking carefully at Row numbers 3,4,5,7 and 10 you will see these sub 2 d
 
 <b>Question:</b>Is there a higher number of fraudulent transactions made during this time frame versus the rest of the day?
 
-<b>Answer:</b> The population average of sub 2 dollar transactions is 10% of 350/3500. Between 7-9am this number is around 11%, therefore you could say that the likleyhood of having a fraudulent transaction is numerically higher, only by a bit. Regardless to say that there is a good chance that fraud and time of day are not highly correlated. 
+<b>Answer:</b> The population average of sub 2 dollar transactions is 10% or 350/3500. Between 7-9am this number is around 11%, therefore you could say that the likleyhood of having a fraudulent transaction is numerically higher, only by a bit. Regardless to say that there is a good chance that fraud and time of day are not highly correlated. 
 
 #
 
