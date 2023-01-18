@@ -27,6 +27,7 @@
 <b>Question:</b> Is there any evidence to suggest that a credit card has been hacked? Explain your rationale.
 
 <b>Answer:</b> Keeping in mind that less than 2 dollar amount transactions account for exactly 10% of the dataset. Implying that they are rear and easily miscontrued. Yes there are a lot of individuals who have more than 15 dollars worth of smaller than 2 dollar transactions. As you can see in the aformentioned view and in the diagram below,  these small transactions summed up and arranged from highest to lowest for a clear snapshot of fraud being evident. 
+Note: Looking carefully at Row numbers 3,4,5,7 and 10 you will see these sub 2 dollar transactions adding up till the 15th decimal place seem to be victims of credit card fraud, merchants of the categories food truck, restaurants, pub, bar and coffee shop do not price items up till the 15th decimal place.
 ![A screenshot of the result.](images/Top10FraudVictims.jpg)
 #
 
