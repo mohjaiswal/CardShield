@@ -1,99 +1,55 @@
-# Credit Card Fraud - Week 7 (SQL+PyViz)
+# Credit Card Fraud Detection Analysis (SQL+PyViz)
 
+![Credit Card Fraud Detection](https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/200099156990375.6371380687770.png)
 
-#### Moh Jaiswal
-#
+## Overview
+This report presents the findings and analysis of a credit card fraud detection project conducted over a span of 2 weeks. The project involved using SQL queries and PyViz visualizations to analyze transaction data and identify potential fraudulent activities.
 
+## Data Source
+The project utilized a provided database containing credit card transaction data. The database included information about cardholders, merchants, transaction amounts, and timestamps.
 
-# <b>Data Analysis Report</b>
+## Objectives
+The primary objectives of the project were as follows:
+1. Isolate and group transactions for each cardholder.
+2. Identify transactions with amounts less than $2.00 per cardholder.
+3. Detect evidence of credit card hacking or fraudulent transactions.
+4. Analyze the top 100 highest transactions within specific time frames.
+5. Explore consumption patterns for different cardholders and identify anomalies.
+6. Utilize visualizations to enhance fraud detection insights.
 
-# DataBase ERD Breakdown
-![ERD](images/ERD_MJ.png)
+## Methodology
 
-# Part 1
+### Transactions Isolation and Grouping
+To isolate transactions for each cardholder, a SQL view named "TransactionsperCardHolderID" was created. This allowed for an organized breakdown of transactions for individual cardholders, considering that a cardholder could have multiple cards.
 
-<b>Question:</b> How can you isolate (or group) the transactions of each cardholder?
+### Detection of Small Transactions
+A SQL view named "LessThan2DollarTransactionsPerCardHolderID$2" was established to count transactions with amounts less than $2.00 per cardholder. This view facilitated the identification of potentially suspicious activities involving small transactions.
 
-<b>Answer:</b> Run VIEW "TransactionsperCardHolderID", this shows line by line data per cardholder as one user has multiple cards. Multiple "card" values for one "card_holder_id."
+### Evidence of Credit Card Hacking
+Evidence of credit card hacking was assessed by examining transactions with amounts less than $2.00. These transactions, constituting around 10% of the dataset, were analyzed for irregular patterns. Notably, certain cardholders exhibited a higher frequency of such transactions, suggesting potential fraud.
 
-#
+### Analysis of Top Transactions
+A SQL view named "top100" was utilized to identify the top 100 highest transactions made between 7:00 am and 9:00 am. This analysis aimed to detect any anomalous transactions that could indicate fraudulent activities during this time frame.
 
-<b>Question:</b> Count the transactions that are less than $2.00 per cardholder.
+### Consumption Patterns and Anomaly Detection
+PyViz visualizations were employed to create time series line plots of transactions for cardholders. A clear difference in consumption patterns between cardholders was observed. Cardholder 18 exhibited higher spending limits, potentially making them susceptible to larger-scale fraud attempts.
 
-<b>Answer:</b> Run VIEW "LessThan2DollarTransactionsPerCardHolderID$2" for the count of transactions that are less than $2.00 per cardholder.
+![Card Holder 2 Transactions](images/Card_Holder_2.png)
+![Card Holder 18 Transactions](images/Card_Holder_18.png)
+![Grouped Transactions by Card Holder](images/Grouped_By_IdCardHolder.png)
 
-#
+### Outlier Detection
+Box plots were utilized to analyze expenditure data from January 2018 to June 2018 for cardholder ID 25. Outliers were identified in months with transactions deviating from the typical spending behavior, suggesting potential anomalies.
 
-<b>Question:</b> Is there any evidence to suggest that a credit card has been hacked? Explain your rationale.
+![Monthly Transactions for Card Holder 25](images/monthly_transactions.png)
 
-<b>Answer:</b> Keeping in mind that less than 2 dollar amount transactions account for exactly 10% of the dataset. Implying that they are rear and easily miscontrued. Yes there are a lot of individuals who have more than 15 dollars worth of smaller than 2 dollar transactions. As you can see in the aformentioned view and in the diagram below,  these small transactions summed up and arranged from highest to lowest for a clear snapshot of fraud being evident. 
-Note: Looking carefully at Row numbers 3,4,5,7 and 10 you will see these sub 2 dollar transactions adding up till the 15th decimal place seem to be victims of credit card fraud, merchants of the categories food truck, restaurants, pub, bar and coffee shop do not price items up till the 15th decimal place.
-![A screenshot of the result.](images/Top10FraudVictims.jpg)
-#
+## Conclusion
+The project successfully demonstrated the utilization of SQL querying and PyViz visualizations for credit card fraud detection. Various analysis techniques were applied to isolate potential fraudulent transactions, identify anomalous patterns, and assess consumption behaviors. The findings underscored the importance of closely monitoring small transactions, analyzing consumption patterns, and employing data visualization tools for fraud detection.
 
-<b>Question:</b> What are the top 100 highest transactions made between 7:00 am and 9:00 am?
+The project enhanced skills in data analysis, SQL querying, data visualization, and fraud detection techniques. It also improved communication abilities for presenting complex findings in a comprehensible manner.
 
-<b>Answer:</b> Run VIEW "top100" for the top 100 highest transactions made between 7:00 am and 9:00 am
+For more detailed information, refer to the provided code, SQL views, and PyViz visualizations in the respective files.
 
-#
-<b>Question:</b> Do you see any anomalous transactions that could be fraudulent?
-
-<b>Answer:</b> Out of 275 transactions that happened between 7-9am, 30 were sub 2 dollars. At percentage of 11%, it is at this time when this figure is slightly higher than the population average of 1/10 transactions being sub 2 dollars.
-
-#
-
-<b>Question:</b>Is there a higher number of fraudulent transactions made during this time frame versus the rest of the day?
-
-<b>Answer:</b> The population average of sub 2 dollar transactions is 10% or 350/3500. Between 7-9am this number is around 11%, therefore you could say that the likleyhood of having a fraudulent transaction is numerically higher, only by a bit. Regardless to say that there is a good chance that fraud and time of day are not highly correlated. 
-
-#
-
-<b>Question:</b> If you answered yes to the previous question, explain why you think there might be fraudulent transactions during this time frame.
-
-<b>Answer:</b> This time is when most working people are either going to work and grabbing some food/drink on the way. They are most susecptible to credit card with tap technology to be fraudulently swiped through a EMF reader. This is only one of the ways that a credit card can be hacked, there are other ways that not time bound but have other interpersonal factors like proximity to card, info on the card holder their billing address and such. 
-
-#
-
-<b>Question:</b> What are the top 5 merchants prone to being hacked using small transactions?
-
-<b>Answer:</b> Assume that merchants charging less than 2$s are the vitcims:
-Johnson-Watts (resturant), Henderson and Sons (resturant),  Hess and Finley Scott (bar), Pugh-Williams (bar), Ruiz-Anderson (pub). No particular type of merchant is more prone, but these are the ones most likely prone to fraudulent activities.
-
-![A screenshot of the result.](images/TopMerchantVictim.jpg)
-#
-
-
-# Part 2 
-
-Line plot representing the time series of transactions over the course of the year for each cardholder 2 and 18
-
-![A screenshot of the result.](images/Card_Holder_2.png)
-
-![A screenshot of the result.](images/Card_Holder_18.png)
-
-Single line plot containing both card holder transaction data
-
-![A screenshot of the result.](images/Grouped_By_IdCardHolder.png)
-
-#
-
-<b>Question: </b> What difference do you observe between the consumption patterns? Does the difference suggest a fraudulent transaction? Explain your rationale.
-
-<b>Answer:</b> Card Holder 18 has a higher spending limit, thereford drawing transactions above 1000$, they have a chance of being exposed to larger financial fraud due to the higher credit limit they are utilising and therefore risk giving robbers access to. Card Holder 2 is more reserved in its deployment of credit limit, always doing smaller amounts with nothing being over 20 dollars. Finding fraudulent transactions would be much harder as it is of a smaller amount and can hide behind the day to day medium sized purchases.
-
-#
-#
-Box plot, representing the expenditure data from January 2018 to June 2018 for cardholder ID 25.
- 
-![A screenshot of the result.](images/monthly_transactions.png)
-
-<b> Question: </b> Are there any outliers for cardholder ID 25? How many outliers are there per month?
-
-<b>Answer:</b> Yes there are outliers of transacations every month except in February. April and June being the hotter months where outliers are strongly present with 3 per month. The rest (January, March and May) being single outlier months.
-
-#
-<b>Question:</b> Do you notice any anomalies? Describe your observations and conclusions.
-
-<b>Answer:</b> These transactions need to be validated by the card holder and the bank, they might be fraudulent in nature as they are outside of the usual behaviour of that card holder.
-
-
+---
+**Author:** Moh Jaiswal  
+**Date:** [Insert Date]
