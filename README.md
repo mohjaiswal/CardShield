@@ -14,7 +14,7 @@ This repository contains the code and analysis for a fraud detection assignment 
 In this section, we define a database model to store credit card transactions data and create a new PostgreSQL database using this model. We also create an entity-relationship diagram (ERD) based on the provided CSV files to visualize the structure of our database.
 
 ### Entity-Relationship Diagram (ERD)
-![ERD Diagram](
+![ERD Diagram](images/ERD_MJ.png)
 The project utilized a provided database containing credit card transaction data. The database included information about cardholders, merchants, transaction amounts, and timestamps.
 
 ## Objectives
