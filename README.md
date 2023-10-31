@@ -1,11 +1,20 @@
-# Credit Card Fraud Detection Analysis (SQL+PyViz)
+# Fraud Detection using SQL and PyViz
 
 ![Credit Card Fraud Detection](https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/200099156990375.6371380687770.png)
 
 ## Overview
-This report presents the findings and analysis of a credit card fraud detection project conducted over a span of 2 weeks. The project involved using SQL queries and PyViz visualizations to analyze transaction data and identify potential fraudulent activities.
+This repository contains the code and analysis for a fraud detection assignment that involves analyzing historical credit card transactions and consumption patterns. The assignment is divided into three main tasks:
 
-## Data Source
+  1. Data Modeling
+  2. Data Engineering
+  3. Data Analysis
+
+## Data Modeling
+
+In this section, we define a database model to store credit card transactions data and create a new PostgreSQL database using this model. We also create an entity-relationship diagram (ERD) based on the provided CSV files to visualize the structure of our database.
+
+### Entity-Relationship Diagram (ERD)
+![ERD Diagram](
 The project utilized a provided database containing credit card transaction data. The database included information about cardholders, merchants, transaction amounts, and timestamps.
 
 ## Objectives
