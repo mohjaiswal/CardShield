@@ -80,7 +80,7 @@ Use the Jupyter Notebook `visual_data_analysis_MJ.ipynb` for data analysis and v
 
 - **Moh Jaiswal** (Project Lead)
 
-Acknowledgments to instructors and fellow students for valuable insights.
+Acknowledgments to instructors Sasanka Panda and Mehdi Lebi along with fellow students for valuable insights.
 
 ## License
 
