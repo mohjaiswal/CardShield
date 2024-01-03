@@ -4,13 +4,11 @@
 
 ## Description
 
-CrediSafe is a credit card fraud detection project that uses data analysis to identify potential fraudulent transactions. The project consists of three main tasks:
+CrediSafe is an innovative project aimed at detecting credit card fraud through comprehensive data analysis. The project encompasses three core tasks:
 
-1. **Data Modeling:** We create a PostgreSQL database, designing it using an entity-relationship diagram (ERD).
-
-2. **Data Engineering:** Data from CSV files is imported into the database.
-
-3. **Data Analysis:** Using SQL queries and PyViz visualizations, we address the CFO's request for identifying potential fraudulent transactions and generating detailed trend data on specific cardholders.
+1. **Data Modeling:** Development of a PostgreSQL database, structured based on an entity-relationship diagram (ERD).
+2. **Data Engineering:** Importation of data from CSV files into the database.
+3. **Data Analysis:** Execution of SQL queries and PyViz visualizations to identify potential fraudulent transactions and to generate detailed trend data for specific cardholders.
 
 ## Badges
 
@@ -20,72 +18,76 @@ CrediSafe is a credit card fraud detection project that uses data analysis to id
 
 ![ERD Diagram](images/ERD_MJ.png)
 
-The ERD represents the relationships between different tables, including `card_holder`, `credit_card`, `merchant`, `merchant_category`, and `transaction`.
+The ERD diagram illustrates the interconnections among various tables including `card_holder`, `credit_card`, `merchant`, `merchant_category`, and `transaction`.
 
 ## Installation
 
-1. Clone the repository.
-2. Set up a PostgreSQL database named CrediSafe.
-3. Create the database schema using the provided SQL file.
-4. Import data from the CSV files.
-5. Install required Python libraries: `pip install pandas sqlalchemy hvplot`.
-6. Run the Jupyter Notebook for data analysis.
+1. Clone the CrediSafe repository.
+2. Establish a PostgreSQL database named 'CrediSafe'.
+3. Utilize the supplied SQL file to create the database schema.
+4. Import data from CSV files into the database.
+5. Install necessary Python libraries using: `pip install pandas sqlalchemy hvplot`.
+6. Launch the Jupyter Notebook for conducting data analysis.
 
 ## Objectives
 
-1. Isolate and group transactions for each cardholder.
-2. Detect evidence of credit card hacking or fraudulent transactions.
-3. Analyze consumption patterns and identify anomalies.
-4. Utilize visualizations to enhance fraud detection insights.
+1. Segregate and analyze transactions for individual cardholders.
+2. Identify and flag potential fraudulent transactions.
+3. Examine consumption patterns to spot anomalies.
+4. Employ visualizations for improved fraud detection.
 
 ## Usage
 
-Use the Jupyter Notebook `visual_data_analysis_MJ.ipynb` for data analysis and visualizations.
+For conducting data analysis and generating visualizations, refer to the Jupyter Notebook `visual_data_analysis_MJ.ipynb`.
 
 ## Visual Data Analysis of Fraudulent Transactions
 
-### Data Analysis Question 1
+### Analysis Question 1
 
-- Visualize time series of transactions for cardholder IDs 2 and 18.
-- Compare consumption patterns to detect potential fraud.
+- Visualization of transaction time series for cardholder IDs 2 and 18.
+- Assessment of consumption patterns to identify potential fraud.
 
 ![Card Holder 2 Transactions](images/Card_Holder_2.png)
 
-### Data Analysis Question 2
+### Analysis Question 2
 
-- Analyze expenditure data for cardholder ID 25 in the first quarter of 2018.
-- Detect outliers and provide insights.
+- Examination of spending data for cardholder ID 25 in the first quarter of 2018.
+- Identification of outliers and analytical insights.
 
 ![Card Holder 18 Transactions](images/Card_Holder_18.png)
 
 ## Support
 
-- Create an issue in this repository.
-- Chat on [LinkedIn](https://www.linkedin.com/in/mohjaiswal).
-- Contact at mohjaiswal@gmail.com.
+- For issues, create a ticket in this repository.
+- Connect on [LinkedIn](https://www.linkedin.com/in/mohjaiswal).
+- Email: mohjaiswal@gmail.com.
 
 ## Roadmap
 
-1. Improve fraud detection algorithms.
-2. Enhance visualizations.
-3. Explore machine learning-based fraud detection.
+1. Refine fraud detection algorithms.
+2. Advance the visual analytical tools.
+3. Integrate machine learning techniques for fraud detection.
 
 ## Contributing
 
-1. Fork the repository.
-2. Create a new branch.
-3. Make changes and open a pull request.
+1. Fork the CrediSafe repository.
+2. Start a new branch.
+3. Implement changes and submit a pull request.
 
 ## Authors and Acknowledgment
 
-- **Moh Jaiswal** (Project Lead)
+- **Moh Jaiswal** - Project Lead
 
-Acknowledgments to instructors Sasanka Panda and Mehdi Lebi along with fellow students for valuable insights.
+Special thanks to instructors Sasanka Panda and Mehdi Lebi, and peers for their invaluable contributions.
 
 ## License
 
-This project is licensed under the MIT License.
+CrediSafe is made available under the MIT License.
 
 ## Project Status
 
-Active development. Contributions welcome.
+Currently in active development. Contributions are highly encouraged.
+
+## Legal Disclaimer
+
+### This analysis is strictly for educational and research purposes and should not be viewed as professional financial or investment advice. Exercise caution and conduct thorough research prior to making any investment decisions. The repository owner disclaims responsibility for any actions taken based on this information. The findings and conclusions herein should be considered educational, not professional advice.
