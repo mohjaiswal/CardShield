@@ -1,4 +1,4 @@
-# CrediSafe - Credit Card Fraud Detection
+# CardShield: Enhanced Credit Card Fraud Prevention
 
 ![CrediSafe](https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/200099156990375.6371380687770.png)
 
